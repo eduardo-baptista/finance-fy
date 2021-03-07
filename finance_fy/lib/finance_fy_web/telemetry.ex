@@ -1,4 +1,7 @@
 defmodule FinanceFyWeb.Telemetry do
+@moduledoc """
+  App Telemetry
+"""
   use Supervisor
   import Telemetry.Metrics
 
