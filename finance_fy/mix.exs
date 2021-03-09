@@ -52,7 +52,8 @@ defmodule FinanceFy.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:bcrypt_elixir, "~> 2.0"},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:excoveralls, "~> 0.10", only: :test},
+      {:guardian, "~> 2.0"}
     ]
   end
 
