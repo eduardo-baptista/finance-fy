@@ -28,6 +28,11 @@ config :finance_fy, FinanceFy.Repo,
   migration_primary_key: [type: :binary_id],
   migration_foreign_key: [type: :binary_id]
 
+# Configure Guardian
+config :finance_fy, FinanceFy.Guardian,
+  issuer: "finance_fy",
+  secret_key: "6z447jF4+fi37pvFBPmvi1kZrQ1FaASrFuNP6tDpVsbXpaOCFn+YTPyr/GteuykR"
+
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
