@@ -23,6 +23,7 @@ defmodule FinanceFyWeb do
 
       import Plug.Conn
       import FinanceFyWeb.Gettext
+      import FinanceFyWeb.Validator
       alias FinanceFyWeb.Router.Helpers, as: Routes
     end
   end
