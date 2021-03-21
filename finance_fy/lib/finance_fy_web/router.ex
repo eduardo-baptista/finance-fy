@@ -5,8 +5,10 @@ defmodule FinanceFyWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", FinanceFyWeb do
+  scope "/api/v1", FinanceFyWeb do
     pipe_through :api
+
+    post "/users", UsersController, :create
   end
 
   # Enables LiveDashboard only for development
