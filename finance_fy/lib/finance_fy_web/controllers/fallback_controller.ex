@@ -9,4 +9,11 @@ defmodule FinanceFyWeb.FallbackController do
     |> put_view(FinanceFyWeb.ErrorView)
     |> render("400.json", result: result)
   end
+
+  def call(conn, {:error, :authentication_fail}) do
+    conn
+    |> put_status(:bad_request)
+    |> put_view(FinanceFyWeb.ErrorView)
+    |> render("400.json", message: "Authentication fail")
+  end
 end

@@ -9,6 +9,7 @@ defmodule FinanceFyWeb.Router do
     pipe_through :api
 
     post "/users", UsersController, :create
+    post "/sessions", SessionsController, :create
   end
 
   # Enables LiveDashboard only for development
