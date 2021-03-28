@@ -1,11 +1,11 @@
-defmodule FinanceFy.User.SignIn do
+defmodule FinanceFy.Users.SignIn do
 @moduledoc """
   Sign in user and generates authentication token
 """
   import FinanceFy.Guardian
 
   alias FinanceFy.Repo
-  alias FinanceFy.User
+  alias FinanceFy.Users.User
 
   def call(email, password) do
     with %User{} = user <- Repo.get_by(User, email: email),

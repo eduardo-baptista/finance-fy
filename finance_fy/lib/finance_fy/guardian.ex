@@ -4,7 +4,7 @@ defmodule FinanceFy.Guardian do
 """
   use Guardian, otp_app: :finance_fy
 
-  alias FinanceFy.User
+  alias FinanceFy.Users.User
   alias FinanceFy.Repo
 
   def subject_for_token(%User{id: id}, _claims), do: {:ok, id}

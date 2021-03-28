@@ -4,7 +4,7 @@ defmodule FinanceFyWeb.SessionsControllerTest do
 """
   alias FinanceFy.Guardian
   alias FinanceFy.Repo
-  alias FinanceFy.User
+  alias FinanceFy.Users.User
 
   use FinanceFyWeb.ConnCase, async: true
 

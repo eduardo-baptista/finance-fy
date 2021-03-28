@@ -1,5 +1,5 @@
 defmodule FinanceFyWeb.UsersView do
-  alias FinanceFy.User
+  alias FinanceFy.Users.User
 
   def render("create.json", %{user: %User{} = user, token: token}) do
     %{

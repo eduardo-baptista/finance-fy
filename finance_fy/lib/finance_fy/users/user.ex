@@ -1,4 +1,4 @@
-defmodule FinanceFy.User do
+defmodule FinanceFy.Users.User do
 @moduledoc """
   Ecto schema for users table
 """

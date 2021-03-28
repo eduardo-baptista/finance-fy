@@ -1,12 +1,12 @@
-defmodule FinanceFy.User.SignInTest do
+defmodule FinanceFy.Users.SignInTest do
   @moduledoc """
     Sign in user and generates authentication token
   """
     use FinanceFy.DataCase, async: true
 
     alias FinanceFy.Guardian
-    alias FinanceFy.User
-    alias FinanceFy.User.SignIn
+    alias FinanceFy.Users.SignIn
+    alias FinanceFy.Users.User
 
     describe "call/2" do
       setup do

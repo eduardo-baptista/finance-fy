@@ -1,10 +1,10 @@
-defmodule FinanceFy.User.SignUp do
+defmodule FinanceFy.Users.SignUp do
 @moduledoc """
   Create a new user and sign in
   """
   import FinanceFy.Guardian
 
-  alias FinanceFy.User.Create
+  alias FinanceFy.Users.Create
 
   def call (params) do
     with {:ok, user} <- Create.call(params),

@@ -1,12 +1,12 @@
-defmodule FinanceFy.User.CreateTest do
+defmodule FinanceFy.Users.CreateTest do
   @moduledoc """
     Test create user
   """
     use FinanceFy.DataCase, async: true
 
     alias FinanceFy.Repo
-    alias FinanceFy.User
-    alias FinanceFy.User.Create
+    alias FinanceFy.Users.Create
+    alias FinanceFy.Users.User
 
     describe "call/1" do
       test "When all params are valid it should return an created user" do

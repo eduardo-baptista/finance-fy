@@ -1,9 +1,9 @@
-defmodule FinanceFy.User.Create do
+defmodule FinanceFy.Users.Create do
 @moduledoc """
   Create new user and save it
 """
   alias FinanceFy.Repo
-  alias FinanceFy.User
+  alias FinanceFy.Users.User
 
   def call (params) do
     params

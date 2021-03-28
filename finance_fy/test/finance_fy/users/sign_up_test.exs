@@ -1,4 +1,4 @@
-defmodule FinanceFy.SignUp do
+defmodule FinanceFy.Users.SignUpTest do
   @moduledoc """
     Create a new user and sign in
     """
@@ -6,8 +6,8 @@ defmodule FinanceFy.SignUp do
 
     alias FinanceFy.Guardian
     alias FinanceFy.Repo
-    alias FinanceFy.User
-    alias FinanceFy.User.SignUp
+    alias FinanceFy.Users.User
+    alias FinanceFy.Users.SignUp
 
     describe "call/1" do
       test "When all params are valid it should return a valid token" do
