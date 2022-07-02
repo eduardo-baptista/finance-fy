@@ -1,7 +1,7 @@
 defmodule FinanceFyWeb.SessionsControllerTest do
-@moduledoc """
-  Users controller
-"""
+  @moduledoc """
+    Users controller
+  """
   alias FinanceFy.Guardian
   alias FinanceFy.Repo
   alias FinanceFy.Users.User
@@ -34,16 +34,16 @@ defmodule FinanceFyWeb.SessionsControllerTest do
 
       # Act
       response =
-      conn
-      |> post(Routes.sessions_path(conn, :create, params))
-      |> json_response(:ok)
+        conn
+        |> post(Routes.sessions_path(conn, :create, params))
+        |> json_response(:ok)
 
       # Assert
       assert %{
-        "id" => _id,
-        "email" => "shinzou@sasageyo.com",
-        "name" => "Tatakae",
-      } = response
+               "id" => _id,
+               "email" => "shinzou@sasageyo.com",
+               "name" => "Tatakae"
+             } = response
     end
 
     test "When all params are valid it should return valid token", %{
@@ -58,9 +58,9 @@ defmodule FinanceFyWeb.SessionsControllerTest do
 
       # Act
       %{"token" => token, "id" => id} =
-      conn
-      |> post(Routes.sessions_path(conn, :create, params))
-      |> json_response(:ok)
+        conn
+        |> post(Routes.sessions_path(conn, :create, params))
+        |> json_response(:ok)
 
       {:ok, claims} = Guardian.decode_and_verify(token)
 
@@ -76,9 +76,9 @@ defmodule FinanceFyWeb.SessionsControllerTest do
 
       # Act
       response =
-      conn
-      |> post(Routes.sessions_path(conn, :create, params))
-      |> json_response(:bad_request)
+        conn
+        |> post(Routes.sessions_path(conn, :create, params))
+        |> json_response(:bad_request)
 
       # Assert
       expected_value = %{
@@ -87,6 +87,7 @@ defmodule FinanceFyWeb.SessionsControllerTest do
           "password" => ["can't be blank"]
         }
       }
+
       assert response === expected_value
     end
 
